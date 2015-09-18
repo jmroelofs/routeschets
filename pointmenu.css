@@ -5,7 +5,7 @@ body {
 	padding-top: 0;
 	padding-bottom: 0;
 	background-image: none;
-	background-color: white;
+	background-color: black;
 	font-size: 14px;
 	font-family: Arial, sans-serif;
 }
@@ -18,11 +18,13 @@ body {
 .bigpicture.horizontal {
 	height: auto;
 	width: 100vw;
+	min-width: 1800px;
 }
 
 .bigpicture.vertical {
 	height: 100vh;
 	width: auto;
+	min-height: 2400px;
 }
 
 .point,
