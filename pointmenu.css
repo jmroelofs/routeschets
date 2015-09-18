@@ -1,0 +1,87 @@
+html,
+body {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	background-image: none;
+	background-color: white;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+}
+
+.bigpicture {
+	margin: auto;
+	display: block;
+}
+
+.bigpicture.horizontal {
+	height: auto;
+	width: 100vw;
+}
+
+.bigpicture.vertical {
+	height: 100vh;
+	width: auto;
+}
+
+.point,
+#homeButton,
+#clearButton,
+#saveButton,
+#loginButton,
+#pointMenu {
+	position: absolute;
+	background-color: rgba(255,255,255,0.25);
+	/* border: 1px solid rgba(0,0,0,0.50); */
+	border-radius: 6px;
+	color: black;
+	padding: 0 2px;
+}
+
+#pointMenu {
+	left: 4px;
+	top: 23px;
+	padding: 0 4px;
+	list-style: none;
+	z-index: 1000;
+}
+
+#pointMenu.moreLeft {
+	left: -25px;
+}
+
+#pointMenu.moreUp {
+	top: -65px;
+}
+
+#homeButton,
+#clearButton,
+#saveButton,
+#loginButton {
+	background-color: lightgrey;
+	position: fixed;
+	left: 10px;
+}
+
+#clearButton {
+	top: 85px;
+}
+
+#saveButton {
+	top: 60px;
+}
+
+#loginButton {
+	top: 35px;
+}
+
+#homeButton {
+	top: 10px;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	font-weight: 700;
+}

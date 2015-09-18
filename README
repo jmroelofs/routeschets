@@ -1,0 +1,11 @@
+This is a Joomla-based solution for making route sketches in climbing competitions.
+
+It makes paper unnecessary and automates the numbering. An iPad is sufficient.
+Make a picture of the route, place it in a Joomla article with the code embedded,
+and you're ready to start nummbering the holds.
+
+As long as you are logged in and have edit rights, you can edit the sketch.
+When logged out, you'll see the sketch like the rest of the world and cannot
+modify it.
+
+Use the sketch as a means for scoring, or show it on screen during a competition.
