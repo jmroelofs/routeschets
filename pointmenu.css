@@ -42,8 +42,8 @@ body {
 }
 
 #pointMenu {
-	left: 4px;
-	top: 23px;
+	left: 25px;
+	top: -20px;
 	padding: 0 4px;
 	list-style: none;
 	z-index: 1000;
@@ -85,5 +85,5 @@ body {
 a:hover,
 a:focus {
 	text-decoration: none;
-	font-weight: 700;
+	text-shadow: 1px 1px currentColor;
 }
