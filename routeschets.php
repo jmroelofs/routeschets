@@ -53,9 +53,9 @@ jQuery(function ($) {
 						var origHeight= $(window).height(),
 						    origWidth = $(window).width();
 						$(this).parent().append('<ul id="pointMenu">' +
-							'<li><a href="#" id="up"  >up</a></li>' +
-							'<li><a href="#" id="del" >del</a></li>' +
-							'<li><a href="#" id="down">down</a></li></ul>');
+							'<li><a href="#" id="up"  >&#x2b06;</a></li>' +
+							'<li><a href="#" id="del" >&#x2716;</a></li>' +
+							'<li><a href="#" id="down">&#x2b07;</a></li></ul>');
 						// make sure it's on screen
 						if (document.getElementById('pointMenu').getBoundingClientRect().right > origWidth)
 							$('#pointMenu').addClass('moreLeft');
