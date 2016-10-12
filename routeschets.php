@@ -54,7 +54,7 @@ jQuery(function ($) {
 						    origWidth = $(window).width();
 						$(this).parent().append('<ul id="pointMenu">' +
 							'<li><a href="#" id="up"  >&#x2b06;</a></li>' +
-							'<li><a href="#" id="del" >&#x2716;</a></li>' +
+							'<li><a href="#" id="del" >&#x274c;</a></li>' +
 							'<li><a href="#" id="down">&#x2b07;</a></li></ul>');
 						// make sure it's on screen
 						if (document.getElementById('pointMenu').getBoundingClientRect().right > origWidth)
@@ -62,14 +62,21 @@ jQuery(function ($) {
 						if (document.getElementById('pointMenu').getBoundingClientRect().bottom > origHeight)
 							$('#pointMenu').addClass('moreUp');
 						// remove if clicked again
-						$('body').click(function(event){$('#pointMenu').remove()});
+						$('body').one('click', function(event){
+							event.preventDefault();
+							$('#pointMenu').remove();
+							return false;
+						});
 						// implement functionality
 						$('#del').click(function(event){
+							event.preventDefault();
 							var number= parseInt($(this).parents('.point').children().html()) - 1;
 							pointList.splice(number, 1);
 							drawPointList();
+							return false;
 						});
 						$('#up').click(function(event){
+							event.preventDefault();
 							var number= parseInt($(this).parents('.point').children().html()) - 1;
 							if (number < pointList.length) {
 								var point= pointList[number];
@@ -77,8 +84,10 @@ jQuery(function ($) {
 								pointList.splice(number+1, 0, point);
 								drawPointList();
 							}
+							return false;
 						});
 						$('#down').click(function(event){
+							event.preventDefault();
 							var number= parseInt($(this).parents('.point').children().html()) - 1;
 							if (number > 0) {
 								var point= pointList[number];
@@ -86,6 +95,7 @@ jQuery(function ($) {
 								pointList.splice(number-1, 0, point);
 								drawPointList();
 							}
+							return false;
 						});
 					}
 <?php } ?>
