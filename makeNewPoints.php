@@ -17,14 +17,16 @@ defined('_ROUTESCHETS') or die;
 <?php if ($canEdit) { ?>
 	// implement making new points
 	ourPicture.click(function (e) {
-		var relX= (e.pageX - $(this).offset().left)/$(this).width(),
-			relY= (e.pageY - $(this).offset().top)/$(this).height();
-		if (!pointList)
-			pointList= [[relX, relY]];
-		else {
-			for (var i= 0; i < pointList.length && relY < pointList[i][1]; i++);
-			pointList.splice(i, 0, [relX, relY]);
+		if (!$('#pointMenu').length){
+			var relX= (e.pageX - $(this).offset().left)/$(this).width(),
+				relY= (e.pageY - $(this).offset().top)/$(this).height();
+			if (!pointList)
+				pointList= [[relX, relY]];
+			else {
+				for (var i= 0; i < pointList.length && relY < pointList[i][1]; i++);
+				pointList.splice(i, 0, [relX, relY]);
+			}
+			drawPointList();
 		}
-		drawPointList();
 	});
 <?php } ?>
